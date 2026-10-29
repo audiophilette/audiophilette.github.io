@@ -4,7 +4,11 @@ title: Plastic Skillet Publishing
 permalink: /
 ---
 
-# Welcome to Plastic Skillet Publishing
+<link rel="stylesheet" href="{{ '/assets/css/catgirl.css' | relative_url }}">
+
+<div class="catgirl-content" markdown="1">
+
+<img src="{{ '/assets/img/catgirl.png' | relative_url }}" alt="Sensurround Q. Catgirl" class="catgirl-float" >
 
 *Stories that probably shouldn't exist, but do anyway.*
 
@@ -47,4 +51,4 @@ probably working perfectly well beforehand.
 ---
 
 *Plastic Skillet Publishing — Because apparently writing the
-stories wasn't enough. We needed a website, too.*
+stories wasn't enough. I need a website, too.*
