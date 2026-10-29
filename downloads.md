@@ -1,22 +1,16 @@
----
-layout: page
-title: Downloads
----
+## Downloads
 
-{% assign downloads = site.static_files | where_exp: "file", "file.path contains '/downloads/'" | sort: "path" %}
-
-{% for file in downloads %}
-  {% assign parts = file.path | split: "/" %}
-  {% assign folder = parts[2] %}
-
-  {% if folder != previous_folder %}
-    <h2>{{ folder }}</h2>
-    {% assign previous_folder = folder %}
+{% assign download_count = 0 %}
+{% for file in site.static_files %}
+  {% if file.path contains '/downloads/serpentsHeart/' %}
+    {% assign ext = file.extname | downcase %}
+    {% if ext == '.epub' or ext == '.pdf' or ext == '.md' %}
+      {% assign download_count = download_count | plus: 1 %}
+- [{{ file.name }}]({{ file.path | relative_url }})
+    {% endif %}
   {% endif %}
-
-  <p>
-    <a href="{{ file.path | relative_url }}">
-      {{ file.name }}
-    </a>
-  </p>
 {% endfor %}
+
+{% if download_count == 0 %}
+No downloads found.
+{% endif %}
