@@ -8,7 +8,9 @@ permalink: /
 
 <div class="catgirl-content" markdown="1">
 
-<img src="{{ '/assets/img/catgirl.png' | relative_url }}" alt="Sensurround Q. Catgirl" class="catgirl-float" >
+<div class="catgirl-float">
+  <img src="{{ '/assets/img/catgirl.png' | relative_url }}" alt="Sensurround Q. Catgirl">
+</div>
 
 *Stories that probably shouldn't exist, but do anyway.*
 

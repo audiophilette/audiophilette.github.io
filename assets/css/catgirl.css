@@ -5,7 +5,7 @@
 }
 
 /* Float the paragraph containing the image */
-.catgirl-content > p:has(img.catgirl-float) {
+.catgirl-content > .catgirl-float {
   float: right;
 
   width: 450px;
@@ -44,14 +44,13 @@
 
 /* Mobile layout */
 @media (max-width: 768px) {
-  .catgirl-content > p:has(img.catgirl-float) {
+  .catgirl-content > .catgirl-float {
     float: none;
-
     width: 280px;
     max-width: 100%;
-
     margin: 1rem auto 1.5rem;
-
     shape-outside: none;
   }
+}
+
 }
