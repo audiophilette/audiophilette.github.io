@@ -9,7 +9,9 @@ order: 4
 
 <div class="catgirl-content" markdown="1">
 
-<img src="{{ '/assets/img/catgirl.png' | relative_url }}" alt="Sensurround Q. Catgirl" class="catgirl-float" >
+<div class="catgirl-float">
+  <img src="{{ '/assets/img/catgirl.png' | relative_url }}" alt="Sensurround Q. Catgirl">
+</div>
 
 **Sensurround Q. Catgirl** is the *nom de plume* of [@ShamashAran](https://x.com/ShamashAran) on X, who values her privacy, largely because it allows her to write about whatever she pleases without having to explain herself to people who might recognize her at the grocery store, or at work.
 
