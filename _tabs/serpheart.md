@@ -6,8 +6,6 @@ order: 2
 permalink: /serpent/
 ---
 
-# Harry Potter and the Serpent's Heart
-
 *By Sensurround Q. Catgirl*
 
 ## Download the Book
