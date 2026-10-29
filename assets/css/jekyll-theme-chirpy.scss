@@ -10,23 +10,28 @@
   isolation: isolate;
 }
 
-.catgirl-background::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
+.catgirl-float {
+  float: right;
+  width: 350px;
+  max-width: 40%;
+  height: auto;
 
-  width: 450px;
-  height: 650px;
+  margin: 0 0 1.5rem 2rem;
 
-  background-image: url('/assets/img/catgirl.png');
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: contain;
+  opacity: 0.85;
+}
 
-  opacity: 0.25;
-  pointer-events: none;
-  z-index: -1;
+/* Mobile screens */
+@media (max-width: 768px) {
+  .catgirl-float {
+    float: none;
+    display: block;
+
+    width: 280px;
+    max-width: 100%;
+
+    margin: 1.5rem auto;
+  }
 }
 
 @media (max-width: 768px) {
