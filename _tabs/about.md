@@ -1,6 +1,7 @@
 ---
 # the default layout is 'page'
-icon: fas fa-info-circle
+title: About the Author
+icon: fas fa-user-pen
 order: 4
 ---
 # About the Author
