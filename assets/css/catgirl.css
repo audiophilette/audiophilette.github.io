@@ -8,10 +8,15 @@
 .catgirl-content > p:has(img.catgirl-float) {
   float: right;
 
-  width: 350px;
+  width: 450px;
   max-width: 45%;
 
   margin: 0 0 1.5rem 1.5rem;
+
+  /* Wrap text around her silhouette */
+  shape-outside: url('/assets/img/catgirl.png');
+  shape-image-threshold: 0.1;
+  shape-margin: 20px;
 }
 
 /* Remove Chirpy's image wrapper styling */
@@ -25,6 +30,18 @@
   opacity: 0.95;
 }
 
+/* Expand content area on desktop */
+@media (min-width: 992px) {
+  body:has(.catgirl-content) #panel-wrapper {
+    display: none !important;
+  }
+
+  body:has(.catgirl-content) main {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
 /* Mobile layout */
 @media (max-width: 768px) {
   .catgirl-content > p:has(img.catgirl-float) {
@@ -34,5 +51,7 @@
     max-width: 100%;
 
     margin: 1rem auto 1.5rem;
+
+    shape-outside: none;
   }
 }
