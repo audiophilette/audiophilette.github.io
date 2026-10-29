@@ -1,36 +1,38 @@
-/* Catgirl illustration on the About page */
+/* Catgirl illustration with text flowing around her silhouette */
 
 .catgirl-content {
   display: flow-root;
 }
 
-.catgirl-content img.catgirl-float {
+/* Float the paragraph containing the image */
+.catgirl-content > p:has(img.catgirl-float) {
   float: right;
 
   width: 350px;
   max-width: 45%;
-  height: auto;
 
   margin: 0 0 1.5rem 1.5rem;
+}
 
-  /* Wrap text around the transparent silhouette */
-  shape-outside: url('/assets/img/catgirl.png');
-  shape-image-threshold: 0.1;
-  shape-margin: 15px;
-
-  /* Override Chirpy's image centering */
+/* Remove Chirpy's image wrapper styling */
+.catgirl-content img.catgirl-float {
   display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+
+  margin: 0;
   opacity: 0.95;
 }
 
 /* Mobile layout */
 @media (max-width: 768px) {
-  .catgirl-content img.catgirl-float {
+  .catgirl-content > p:has(img.catgirl-float) {
     float: none;
+
     width: 280px;
     max-width: 100%;
-    margin: 1rem auto 1.5rem;
 
-    shape-outside: none;
+    margin: 1rem auto 1.5rem;
   }
 }
