@@ -1,0 +1,11 @@
+# macOS Finder garbage
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# macOS filesystem metadata
+.Spotlight-V100
+.Trashes
+.fseventsd
+.TemporaryItems
