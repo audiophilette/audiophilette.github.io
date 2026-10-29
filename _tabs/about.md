@@ -5,6 +5,8 @@ icon: fas fa-user-pen
 order: 4
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/catgirl.css' | relative_url }}">
+
 <div class="catgirl-content" markdown="1">
 
 <img src="{{ '/assets/img/catgirl.png' | relative_url }}" alt="Sensurround Q. Catgirl" class="catgirl-float" >
