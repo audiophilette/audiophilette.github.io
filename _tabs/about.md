@@ -2,7 +2,7 @@
 # the default layout is 'page'
 title: About the Author
 icon: fas fa-user-pen
-order: 4
+order: 99 
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/catgirl.css' | relative_url }}">

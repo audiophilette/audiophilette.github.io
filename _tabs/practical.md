@@ -2,7 +2,7 @@
 layout: page
 title: Practical Self Defense for Young Wizards
 icon: fas fa-book
-order: 2
+order: 3 
 permalink: /practical/
 ---
 
