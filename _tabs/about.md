@@ -4,7 +4,8 @@ title: About the Author
 icon: fas fa-user-pen
 order: 4
 ---
-# About the Author
+
+<div class="catgirl-background" markdown="1">
 
 **Sensurround Q. Catgirl** is the *nom de plume* of [@ShamashAran](https://x.com/ShamashAran) on X, who values her privacy, largely because it allows her to write about whatever she pleases without having to explain herself to people who might recognize her at the grocery store, or at work.
 
