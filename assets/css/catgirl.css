@@ -13,10 +13,7 @@
 
   margin: 0 0 1.5rem 1.5rem;
 
-  /* Wrap text around her silhouette */
-  shape-outside: url('/assets/img/catgirl.png');
-  shape-image-threshold: 0.1;
-  shape-margin: 20px;
+  shape-outside: none
 }
 
 /* Remove Chirpy's image wrapper styling */
