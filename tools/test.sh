@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+
+export BUNDLE_GEMFILE="${BUNDLE_GEMFILE:-Gemfile.local}"
 #
 # Build and test the site content
 #

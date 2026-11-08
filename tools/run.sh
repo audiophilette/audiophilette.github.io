@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+
+export BUNDLE_GEMFILE="${BUNDLE_GEMFILE:-Gemfile.local}"
 #
 # Run jekyll serve and then launch the site
 

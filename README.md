@@ -10,6 +10,7 @@ A small script remembers the choice; without JavaScript, device preference still
 Install Ruby 3.4 and Bundler, then run:
 
 ```sh
+export BUNDLE_GEMFILE=Gemfile.local
 bundle install
 bundle exec jekyll serve
 ```
@@ -18,6 +19,8 @@ Open http://127.0.0.1:4000. To build and check links, run `bash tools/test.sh`.
 Pushes to `main` or `master` build and deploy using GitHub’s official `actions/jekyll-build-pages` workflow.
 In the repository’s Settings → Pages, the build source should be GitHub Actions.
 Local dependencies use `github-pages` to match GitHub’s supported Jekyll stack.
+`Gemfile` declares only GitHub’s supplied build dependency; `Gemfile.local` adds
+Ruby compatibility, preview, and link-checking tools for local development.
 
 ## Edit content
 
