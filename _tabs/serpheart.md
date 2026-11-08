@@ -1,26 +1,17 @@
 ---
-layout: page
+layout: book
 title: Harry Potter and the Serpent's Heart
-icon: fas fa-book
-order: 2
+category: Fan fiction
+note: This is an unofficial work of fan fiction.
+order: 1
 permalink: /serpent/
+cover: /assets/img/serpheart.jpg
+download_directory: /downloads/serpentsHeart/
+summary: What if Lucius Malfoy had a daughter instead of a son?
 ---
 
-*By Sensurround Q. Catgirl*
+What if Lucius Malfoy had a daughter instead of a son?
 
-![Book cover for "Harry Potter and the Serpent's Heart"](assets/img/serpheart.jpg)
+A familiar story takes an unfamiliar turn when Dracena Malfoy arrives at Hogwarts, bringing with her all the pride, ambition, and complicated loyalties of the Malfoy family.
 
-## Download the Book
-
-{% assign book_files = site.static_files | where_exp: "file", "file.path contains '/downloads/serpentsHeart/'" %}
-
-{% for file in book_files %}
-{% assign ext = file.extname | downcase %}
-{% if ext == '.epub' or ext == '.pdf' or ext == '.zip' %}
-- **[Download {% if ext == '.zip' %}Markdown + Images (ZIP){% else %}{{ ext | remove: '.' | upcase }}{% endif %}]({{ file.path | relative_url | uri_escape }})**
-{% endif %}
-{% endfor %}
-
----
-
-*This is an unofficial work of fan fiction.*
+And Harry Potter's life is about to become considerably more complicated.

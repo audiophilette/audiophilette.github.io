@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<a class="back-link" href="{{ '/' | relative_url }}">← All books</a>
+<article class="book-detail">
+  <img class="book-cover" src="{{ page.cover | relative_url }}" alt="Cover of {{ page.title | escape }}">
+  <div class="prose">
+    <p class="eyebrow">{{ page.category }}</p>
+    <h1>{{ page.title }}</h1>
+    <p class="byline">By Sensurround Q. Catgirl</p>
+    {{ content }}
+    <h2>Download the book</h2>
+    <ul class="downloads">
+    {% assign book_files = site.static_files | sort: 'path' %}
+    {% for file in book_files %}
+      {% if file.path contains page.download_directory %}
+        {% assign ext = file.extname | downcase %}
+        {% if ext == '.epub' or ext == '.pdf' or ext == '.zip' %}
+        <li><a href="{{ file.path | relative_url | uri_escape }}">{% if ext == '.zip' %}Markdown + images (ZIP){% else %}{{ ext | remove: '.' | upcase }}{% endif %}<span aria-hidden="true"> ↓</span></a></li>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    </ul>
+    {% if page.note %}<p class="book-note">{{ page.note }}</p>{% endif %}
+  </div>
+</article>

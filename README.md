@@ -1,39 +1,48 @@
-# Chirpy Starter
+# Plastic Skillet Publishing
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+A small Jekyll book site hosted by GitHub Pages at https://books.plasticskillet.com.
+There is no external theme or JavaScript build step.
+The header’s Theme control offers Auto (device preference), Light, and Dark.
+A small script remembers the choice; without JavaScript, device preference still works.
 
-A minimal, ready-to-use template for creating a blog with the [**Chirpy**][chirpy] Jekyll theme. Get up and running in minutes with all critical files pre-configured.
+## Preview locally
 
-## Why This Starter Exists
+Install Ruby 3.4 and Bundler, then run:
 
-When installing Chirpy through [RubyGems.org][gem], Jekyll can only read a subset of theme files (`_data`, `_layouts`, `_includes`, `_sass`, `assets`) and limited `_config.yml` options from the gem. As a result, users cannot enjoy the full out-of-the-box experience that Chirpy offers.
-
-To unlock all features, the following files must be present in your Jekyll site:
-
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
+```sh
+bundle install
+bundle exec jekyll serve
 ```
 
-This starter bundles those files from the latest **Chirpy** release along with a [CD][CD] workflow, so you can start writing immediately.
+Open http://127.0.0.1:4000. To build and check links, run `bash tools/test.sh`.
+Pushes to `main` or `master` build and deploy using GitHub’s official `actions/jekyll-build-pages` workflow.
+In the repository’s Settings → Pages, the build source should be GitHub Actions.
+Local dependencies use `github-pages` to match GitHub’s supported Jekyll stack.
 
-## Usage
+## Edit content
 
-Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
+- `index.md`: home page introduction and book listing.
+- `_tabs/about.md`: author biography.
+- `_tabs/serpheart.md` and `_tabs/practical.md`: book metadata and descriptions.
+- `assets/css/site.css`: all styling.
+- `_layouts/`: the three small page templates.
 
-## Contributing
+## Add a book
 
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
+1. Copy `_templates/book.md` to `_tabs/your-book.md`.
+2. Fill in the title, category, and summary. Choose an unused `permalink`
+   such as `/your-book/`. `order` controls the home page order (lowest first).
+3. Save the cover as `assets/img/your-book.jpg` and set `cover` to that path,
+   including the leading `/`.
+4. Create `downloads/your-book/` and put your PDF, EPUB, and/or ZIP files there.
+   Set `download_directory` to `/downloads/your-book/`, including both slashes.
+5. Replace the text below the second `---` with your blurb.
+6. Commit and push the files. The home page lists the book automatically, and
+   its page lists every PDF, EPUB, and ZIP in its download folder.
 
-## License
+No HTML or navigation edits are needed. `summary` is optional and appears only
+on the home page. For a disclaimer below the downloads, add `note: Your text`
+to the metadata. Keep existing download filenames and permalinks when updating
+books so saved links continue to work.
 
-This work is published under [MIT][mit] License.
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+`CNAME` and `url` in `_config.yml` must agree with the custom domain configured in GitHub Pages.

@@ -42,3 +42,7 @@ assets/js/dist
 *~
 .DS_Store
 Thumbs.db
+
+# Editor recovery files
+*.swp
+*.swo

@@ -1,26 +1,12 @@
 ---
-layout: page
+layout: book
 title: Practical Self Defense for Young Wizards
-icon: fas fa-book
-order: 3 
+category: Fan fiction
+note: This is an unofficial work of fan fiction.
+order: 2
 permalink: /practical/
+cover: /assets/img/practical.jpg
+download_directory: /downloads/practicalSelf/
 ---
 
-*By Sensurround Q. Catgirl*
-
-![Book cover for "Practical Self Defense for Young Wizards"](assets/img/practical.jpg)
-
-## Download the Book
-
-{% assign book_files = site.static_files | where_exp: "file", "file.path contains '/downloads/practicalSelf/'" %}
-
-{% for file in book_files %}
-{% assign ext = file.extname | downcase %}
-{% if ext == '.epub' or ext == '.pdf' or ext == '.zip' %}
-- **[Download {% if ext == '.zip' %}Markdown + Images (ZIP){% else %}{{ ext | remove: '.' | upcase }}{% endif %}]({{ file.path | relative_url | uri_escape }})**
-{% endif %}
-{% endfor %}
-
----
-
-*This is an unofficial work of fan fiction.*
+<!-- Add the book blurb here. It appears above the download links. -->

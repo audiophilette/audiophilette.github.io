@@ -1,16 +1,11 @@
 ---
-layout: page
-title: Plastic Skillet Publishing
-permalink: /
+layout: default
+title: Books
 ---
+<section class="introduction" markdown="1">
+<img class="home-portrait" src="{{ '/assets/img/catgirl.png' | relative_url }}" alt="Sensurround Q. Catgirl">
 
-<link rel="stylesheet" href="{{ '/assets/css/catgirl.css' | relative_url }}">
-
-<div class="catgirl-content" markdown="1">
-
-<div class="catgirl-float">
-  <img src="{{ '/assets/img/catgirl.png' | relative_url }}" alt="Sensurround Q. Catgirl">
-</div>
+# Plastic Skillet Publishing
 
 *Stories that probably shouldn't exist, but do anyway.*
 
@@ -22,35 +17,23 @@ Here you'll find original fiction, fan fiction, and occasional
 experiments in storytelling that probably seemed like much
 better ideas when they first occurred to me.
 
-## Featured Book
+[Meet the author]({{ '/about/' | relative_url }})
 
-### Harry Potter and the Serpent's Heart
-
-What if Lucius Malfoy had a daughter instead of a son?
-
-A familiar story takes an unfamiliar turn when Dracena Malfoy
-arrives at Hogwarts, bringing with her all the pride, ambition,
-and complicated loyalties of the Malfoy family.
-
-And Harry Potter's life is about to become considerably more
-complicated.
-
-**[Read more and download the book](/serpent/)**
-
----
-
-## About the Author
-
-**Sensurround Q. Catgirl** writes fiction, political commentary,
-and whatever else happens to catch her attention.
-
-Her hobbies include amateur radio, electronics, programming,
-automotive repair, and taking apart expensive things that were
-probably working perfectly well beforehand.
-
-**[Meet the Author](/about/)**
-
----
-
-*Plastic Skillet Publishing — Because apparently writing the
-stories wasn't enough. I need a website, too.*
+</section>
+<section aria-labelledby="books-heading">
+  <h2 id="books-heading" class="section-heading">The books</h2>
+  <div class="book-list">
+    {% assign books = site.tabs | where: 'layout', 'book' | sort: 'order' %}
+    {% for book in books %}
+    <article class="book-card">
+      <a class="cover-link" href="{{ book.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ book.cover | relative_url }}" alt="" width="360" height="480"></a>
+      <div>
+        <p class="eyebrow">{{ book.category }}</p>
+        <h3><a href="{{ book.url | relative_url }}">{{ book.title }}</a></h3>
+        {% if book.summary %}<p>{{ book.summary }}</p>{% endif %}
+        <a class="book-link" href="{{ book.url | relative_url }}">Details &amp; downloads <span aria-hidden="true">→</span><span class="sr-only"> for {{ book.title }}</span></a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
