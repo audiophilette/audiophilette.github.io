@@ -8,6 +8,8 @@ permalink: /practical/
 
 *By Sensurround Q. Catgirl*
 
+![Book cover for "Practical Self Defense for Young Wizards"](assets/images/practical.jpg)
+
 ## Download the Book
 
 {% assign book_files = site.static_files | where_exp: "file", "file.path contains '/downloads/practicalSelf/'" %}
