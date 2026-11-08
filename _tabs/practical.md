@@ -8,7 +8,7 @@ permalink: /practical/
 
 *By Sensurround Q. Catgirl*
 
-![Book cover for "Practical Self Defense for Young Wizards"](assets/images/practical.jpg)
+![Book cover for "Practical Self Defense for Young Wizards"](assets/img/practical.jpg)
 
 ## Download the Book
 

@@ -8,7 +8,7 @@ permalink: /serpent/
 
 *By Sensurround Q. Catgirl*
 
-![Book cover for "Harry Potter and the Serpent's Heart"](assets/images/serpheart.jpg)
+![Book cover for "Harry Potter and the Serpent's Heart"](assets/img/serpheart.jpg)
 
 ## Download the Book
 
