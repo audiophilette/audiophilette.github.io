@@ -2,7 +2,7 @@
 layout: book
 title: Short Fiction for Short People
 category: Anthology
-note: This is an unofficial work of fan fiction.
+note: Available soon!
 order: 1
 permalink: /shortfiction/
 cover: /assets/img/shortfiction.jpg
