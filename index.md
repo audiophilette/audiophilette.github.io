@@ -31,7 +31,9 @@ better ideas when they first occurred to me.
         <p class="eyebrow">{{ book.category }}</p>
         <h3><a href="{{ book.url | relative_url }}">{{ book.title }}</a></h3>
         {% if book.summary %}<p>{{ book.summary }}</p>{% endif %}
-        <a class="book-link" href="{{ book.url | relative_url }}">Details &amp; downloads <span aria-hidden="true">→</span><span class="sr-only"> for {{ book.title }}</span></a>
+        {% capture downloads %}{% include book-downloads.html book=book %}{% endcapture %}
+        {% assign downloads = downloads | strip %}
+        <a class="book-link" href="{{ book.url | relative_url }}">{% if downloads != '' %}Details &amp; downloads{% else %}Details{% endif %} <span aria-hidden="true">→</span><span class="sr-only"> for {{ book.title }}</span></a>
       </div>
     </article>
     {% endfor %}

@@ -1,0 +1,13 @@
+{%- assign download_directory = include.book.download_directory | default: '' | strip -%}
+{%- if download_directory != '' -%}
+  {%- assign book_files = site.static_files | sort: 'path' -%}
+  {%- for file in book_files -%}
+    {%- assign directory_prefix = file.path | slice: 0, download_directory.size -%}
+    {%- if directory_prefix == download_directory -%}
+      {%- assign ext = file.extname | downcase -%}
+      {%- if ext == '.epub' or ext == '.pdf' or ext == '.zip' -%}
+        <li><a href="{{ file.path | relative_url | uri_escape }}">{% if ext == '.zip' %}Markdown + images (ZIP){% else %}{{ ext | remove: '.' | upcase }}{% endif %}<span aria-hidden="true"> ↓</span></a></li>
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}

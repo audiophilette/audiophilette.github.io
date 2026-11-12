@@ -6,7 +6,7 @@ note: Available soon!
 order: 1
 permalink: /shortfiction/
 cover: /assets/img/shortfiction.jpg
-<!-- download_directory: /downloads/shortfiction/ -->
+# download_directory: /downloads/shortfiction/
 summary: An Anthology of my short fiction.  COMING SOON!
 ---
 

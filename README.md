@@ -48,4 +48,19 @@ on the home page. For a disclaimer below the downloads, add `note: Your text`
 to the metadata. Keep existing download filenames and permalinks when updating
 books so saved links continue to work.
 
+Downloads are optional. Omit `download_directory` (or leave it blank) for a book
+without downloads. If its folder has no PDF, EPUB, or ZIP files, the download
+section is hidden and the home page link simply says “Details.”
+
+To add an Amazon or other store link on the book page, add these metadata fields:
+
+```yaml
+purchase_url: https://www.amazon.com/dp/YOUR_ASIN
+purchase_label: Buy on Amazon
+```
+
+Replace the URL with the actual book listing. The label is customizable and
+defaults to “Buy the book.” The store link appears only when `purchase_url` is
+set, and can appear alongside free downloads or on its own.
+
 `CNAME` and `url` in `_config.yml` must agree with the custom domain configured in GitHub Pages.
