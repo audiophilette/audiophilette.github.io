@@ -3,7 +3,7 @@ layout: book
 title: Harry Potter and the Serpent's Heart
 category: Fan fiction
 note: This is an unofficial work of fan fiction.
-order: 1
+order: 2
 permalink: /serpent/
 cover: /assets/img/serpheart.jpg
 download_directory: /downloads/serpentsHeart/

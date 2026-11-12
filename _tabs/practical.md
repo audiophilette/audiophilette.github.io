@@ -3,7 +3,7 @@ layout: book
 title: Practical Self Defense for Young Wizards
 category: Fan fiction
 note: This is an unofficial work of fan fiction.
-order: 2
+order: 3
 permalink: /practical/
 cover: /assets/img/practical.jpg
 download_directory: /downloads/practicalSelf/
