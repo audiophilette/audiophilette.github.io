@@ -7,7 +7,7 @@ order: 1
 permalink: /shortfiction/
 cover: /assets/img/shortfiction.jpg
 # download_directory: /downloads/shortfiction/
-summary: An Anthology of my short fiction.  COMING SOON!
+summary: An Anthology of my short fiction.  AVAILABLE NOW!
 purchase_url: https://www.amazon.com/dp/B0HSN2Z1YF
 purchase_label: Buy on Amazon
 ---
